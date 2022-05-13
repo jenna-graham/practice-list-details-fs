@@ -5,6 +5,5 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export async function getDragons() {
     const resp = await client.from('dragons').select('*'); 
-
-
+    return resp.data;
 }

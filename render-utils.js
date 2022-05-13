@@ -1,4 +1,4 @@
-export function renderDragon(dragon) {
+export function renderDragons(dragon) {
     const div = document.createElement('div');
     div.classList.add('dragon');
 
@@ -6,7 +6,7 @@ export function renderDragon(dragon) {
     h1.textContent = dragon.name;
 
     const img = document.createElement('img');
-    img.src = dragon.image;
+    img.src = `./assets/${dragon.image}.jpg`;
 
     const p = document.createElement('p');
     p.textContent = `${dragon.name} is ${dragon.length} feet long with a fear factor of ${dragon.fearFactor}.`;

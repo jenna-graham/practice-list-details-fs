@@ -1,10 +1,13 @@
 // import { dragons } from './dragons.js';
-import { renderDragon } from './render-utils.js';
-console.log(dragons);
+import { getDragons } from './fetch-utils.js';
+import { renderDragons } from './render-utils.js';
 
-const dragonList = document.getElementById ('dragons');
-
-for (let dragon of dragons) {
-    const dragonDiv = renderDragon(dragon);
-    dragonList.append(dragonDiv);
+async function loadData() {
+    const dragons = await getDragons();
+    const main = document.querySelector('main');
+    for (let dragon of dragons){
+        const dragonDiv = renderDragons(dragon);
+        main.append(dragonDiv);
+    }
 }
+loadData();
