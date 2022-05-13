@@ -14,6 +14,7 @@ export function renderDragons(dragon) {
     const h2 = document.createElement('h2');
     h2.textContent = `this ${dragon.type} dragon is sometimes called ${dragon.alias} and is known for being ${dragon.traits}.`;
 
+    
    
 
     div.append(h1, img, p, h2,);
