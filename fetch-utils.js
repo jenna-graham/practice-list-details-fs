@@ -7,3 +7,7 @@ export async function getDragons() {
     const resp = await client.from('dragons').select('*'); 
     return resp.data;
 }
+export async function getDragonId(id) {
+    const resp = await client.from('dragons').select('*').match({ id:id }).single;
+    return resp.data;
+}

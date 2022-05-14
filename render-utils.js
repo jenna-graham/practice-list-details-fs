@@ -14,9 +14,11 @@ export function renderDragons(dragon) {
     const h2 = document.createElement('h2');
     h2.textContent = `this ${dragon.type} dragon is sometimes called ${dragon.alias} and is known for being ${dragon.traits}.`;
 
-    
+    const a = document.createElement('a');
+    a.href = `./details?id=${dragon.id}`;
    
-
-    div.append(h1, img, p, h2,);
+    a.append(h1, img, p, h2,);
+    div.append(a);
     return div;
 }
+
